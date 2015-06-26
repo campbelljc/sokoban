@@ -11,9 +11,9 @@ The program uses several graphical assets from elarel, my logic puzzle game base
 
 The code is currently only compilable on Mac due to some sloppy functions using Mac code, but I will be removing them at some point.
 
-Mac Build Requirements (use Makefile):
-Xcode  
-SDL2, SDL2_image, SDL2_net (default framework search in /Library/Frameworks)  
-Curl (looks in /usr/local/lib/)  
-Boost Libraries: System, Filesystem, and Random (you must modify their location in this project's Makefile)  
-Patience  
+Mac Build Requirements (use Makefile):  
+* Xcode  
+* SDL2, SDL2_image, SDL2_net (default framework search in /Library/Frameworks)  
+* Curl (looks in /usr/local/lib/)  
+* Boost Libraries: System, Filesystem, and Random (you must modify their location in this project's Makefile)  
+* Patience  
