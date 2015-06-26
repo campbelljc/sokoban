@@ -15,6 +15,17 @@ using namespace boost::filesystem;
 
 int C_FileIO::init()
 {
+	std::string appPath = boost::filesystem::current_path().string();
+	create_directories(appPath + "/levels/");
+	std::string levelDirs[3] = { "8x8", "11x11", "14x14" };
+	for (int count = 0; count < 3; count ++)
+	{ // size
+		for (int count2 = 0; count2 < 5; count2 ++)
+		{ // num goals
+			create_directories(appPath + "/levels/" + toString(levelDirs[count]) + "-" + toString(count2) + "/");
+		}
+	}
+		
     CFBundleRef mainBundle = CFBundleGetMainBundle();
     CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
     char path[PATH_MAX];
